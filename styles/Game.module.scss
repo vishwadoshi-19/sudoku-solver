@@ -14,6 +14,7 @@ $green: #8bc34a;
   position: relative;
   z-index: 2;
 }
+
 .rgb::after {
   content: "";
   position: absolute;
@@ -30,7 +31,7 @@ $green: #8bc34a;
   box-sizing: border-box;
   font-size: 2rem;
   text-align: center;
-  background-color: #5d6163;
+  background-color: #343434;
   color: #fff;
   margin: auto;
   &.invalid {
@@ -38,6 +39,60 @@ $green: #8bc34a;
     color: $orange;
   }
 }
+.square:nth-of-type(9n+4){
+  background-color: #71707093;
+}
+.square:nth-of-type(9n+5){
+  background-color: #71707093;
+}
+.square:nth-of-type(9n+6){
+  background-color: #71707093;
+}
+
+.square:nth-of-type(n+28){
+  background-color: #71707093;
+}
+.square:nth-of-type(n+55){
+  background-color: #343434;
+}
+
+.square:nth-of-type(9n+4){
+  background-color: #71707093;
+}
+.square:nth-of-type(9n+5){
+  background-color: #71707093;
+}
+.square:nth-of-type(9n+6){
+  background-color: #71707093;
+}
+.square:nth-of-type(31){
+  background-color: #343434;
+}
+.square:nth-of-type(32){
+  background-color: #343434;
+}
+.square:nth-of-type(33){
+  background-color: #343434;
+}
+.square:nth-of-type(40){
+  background-color: #343434;
+}
+.square:nth-of-type(41){
+  background-color: #343434;
+}
+.square:nth-of-type(42){
+  background-color: #343434;
+}
+.square:nth-of-type(49){
+  background-color: #343434;
+}
+.square:nth-of-type(51){
+  background-color: #343434;
+}
+.square:nth-of-type(50){
+  background-color: #343434;
+}
+
 .solve {
   display: flex;
   text-align: center;

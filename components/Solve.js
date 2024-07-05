@@ -13,12 +13,14 @@ const Solve = (props) => {
 
   const handleClick = (choice) => {
     if (choice === "solve") {
-      setStart(Math.floor(Date.now()));
+      console.log(Date.now);
+      setStart((Date.now()));
       let solvedSquares = solveSudoku(props.squares);
       props.setSquares(solvedSquares);
       props.setSolved(true);
       showSuccessToast();
-      setEnd(Math.floor(Date.now()));
+      console.log(Date.now);
+      setEnd((Date.now()));
     } else {
       setStart(null);
       setEnd(null);
