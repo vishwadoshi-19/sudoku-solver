@@ -1,0 +1,84 @@
+$orange: #f44336;
+$green: #8bc34a;
+.game {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.board {
+  display: grid;
+  border: 2px solid #fff;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  position: relative;
+  z-index: 2;
+}
+.rgb::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 16px;
+  filter: blur(8px);
+  z-index: -1;
+  animation: rgb 3s linear infinite;
+}
+.square {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  font-size: 2rem;
+  text-align: center;
+  background-color: #5d6163;
+  color: #fff;
+  margin: auto;
+  &.invalid {
+    border-color: $orange;
+    color: $orange;
+  }
+}
+.solve {
+  display: flex;
+  text-align: center;
+  margin-top: 2rem;
+}
+.timer {
+  margin-top: 1rem;
+  padding: 5px;
+  color: black;
+}
+#solvebtn,
+#resetbtn {
+  border: none;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin: 0 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+#solvebtn {
+  background-color:#414040;
+  color: #ffffff;
+}
+#resetbtn {
+  background-color: #414040;
+  color: white;
+}
+
+@keyframes rgb {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
